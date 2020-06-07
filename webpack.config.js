@@ -3,10 +3,9 @@ const path = require('path')
 
 // additional plugins
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 // helping vars
 const isDev = process.env.NODE_ENV === 'development'
@@ -120,9 +119,6 @@ module.exports = {
   },
 
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: `./css/${filename('css')}`
-    }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       {
@@ -139,6 +135,9 @@ module.exports = {
         // }
       }
     ),
+    new MiniCssExtractPlugin({
+      filename: `./css/${filename('css')}`
+    }),
   ]
 }
 
