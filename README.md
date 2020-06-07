@@ -1,4 +1,6 @@
-# 03_Webpack-GeekBrains
- babel, sass, fonts
- 
- Практика с webpack
+# Webpack-01
+## перед запуском нужно выполнить 
+1) `npm install`
+2) `npm run dev`
+готовые файлы появятся в папке `dist` 
+
