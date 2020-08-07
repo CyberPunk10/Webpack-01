@@ -15,6 +15,7 @@ const filename = ext => isDev ? `[name].${ext}` : `[name].[hash].${ext}`
 
 const cssLoaders = extra => {
   const loaders = [
+    // 'style-loader',
     {
       loader: MiniCssExtractPlugin.loader,
       options: {
